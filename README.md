@@ -8,3 +8,5 @@
 - run `act` - choose medium image
 
 ### You should see some output from the ./.github/workflows/test.yaml file including using the yq action to update the first line in the example yaml file.
+
+![Alt text](image.png)

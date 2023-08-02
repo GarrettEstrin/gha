@@ -1,0 +1,22 @@
+on:
+  push:
+      
+name: Do Something
+jobs:
+  Do-something:
+    name: Do-something
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: do stuff
+      run: |
+        ls -A
+        echo "Garrett"
+    - name: yq - portable yaml processor
+      uses: mikefarah/yq@v4.34.2
+      with:
+        cmd: yq -i '.doe = "cool"' 'example.yaml'
+    - name: read stuff
+      run: |
+        cat ./example.yaml
